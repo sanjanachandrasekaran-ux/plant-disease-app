@@ -13,7 +13,7 @@ if not os.path.exists(output):
     gdown.download(url, output, quiet=False)
 
 # 🔽 Load model
-model = load_model(output, compile=False, safe_mode=False)
+model = load_model(output, compile=False)
 
 # 🔽 Class labels
 class_labels = [
