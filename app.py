@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 import os
 import gdown
-from tensorflow.keras.models import load_model
+from keras.models import load_model
 
 # 🔽 Download model from Google Drive
 url = "https://drive.google.com/uc?id=1zPXNUbJrXxFSUXuWZ2PxIR7e5EinuGD_"
@@ -13,7 +13,7 @@ if not os.path.exists(output):
     gdown.download(url, output, quiet=False)
 
 # 🔽 Load model
-model = load_model(output, compile=False)
+model = load_model(output, compile=False, safe_mode=False)
 
 # 🔽 Class labels
 class_labels = [
