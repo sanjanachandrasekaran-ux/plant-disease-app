@@ -7,7 +7,7 @@ from tensorflow.keras.models import load_model
 
 # 🔽 Download model from Google Drive
 url = "https://drive.google.com/uc?id=1zPXNUbJrXxFSUXuWZ2PxIR7e5EinuGD_"
-output = "plant_disease_model.h5"
+output = "model.h5"
 
 if not os.path.exists(output):
     gdown.download(url, output, quiet=False)
